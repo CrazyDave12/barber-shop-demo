@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: rgba(201, 168, 76, 0.18);
+  color: #e8d5a3;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9a84c;
+  border-radius: 2px;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.85s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.85s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero text entrance */
+@keyframes heroFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-line-1 { animation: heroFade 1s ease 0.2s both; }
+.hero-line-2 { animation: heroFade 1s ease 0.45s both; }
+.hero-line-3 { animation: heroFade 1s ease 0.65s both; }
+.hero-divider { animation: heroFade 1s ease 0.85s both; }
+.hero-tagline { animation: heroFade 1s ease 1.05s both; }
+.hero-cta     { animation: heroFade 1s ease 1.25s both; }
+.hero-scroll  { animation: heroFade 1s ease 1.5s both; }
+
+/* Scrolling line */
+@keyframes scrollLine {
+  0%   { transform: scaleY(0); transform-origin: top; }
+  50%  { transform: scaleY(1); transform-origin: top; }
+  50.1%{ transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+.animate-scroll-line {
+  animation: scrollLine 2s ease-in-out infinite;
+}
