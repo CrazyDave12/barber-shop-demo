@@ -56,5 +56,5 @@ npm run dev
 Then open http://localhost:3000
 
 ## Links
-- GitHub: (to be set up)
-- Vercel URL: (to be deployed)
+- GitHub: https://github.com/CrazyDave12/barber-shop-demo
+- Vercel: https://barber-shop-demo-five.vercel.app
